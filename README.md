@@ -1,9 +1,9 @@
-<a href="https://ai-sdk-starter-groq.vercel.app">
-  <h1 align="center">Vercel x Groq Chatbot</h1>
+<a href="https://github.com/CodeSquar/ai-sdk-starter-cerebras">
+  <h1 align="center">Vercel x Cerebras Chatbot</h1>
 </a>
 
 <p align="center">
-  An open-source AI chatbot app template built with Next.js, the AI SDK by Vercel, and Groq.
+  An open-source AI chatbot app template built with Next.js, the AI SDK by Vercel, and Cerebras.
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 ## Features
 
-- Streaming text responses powered by the [AI SDK by Vercel](https://sdk.vercel.ai/docs), allowing multiple AI providers to be used interchangeably with just a few lines of code.
+- Streaming text responses powered by the [AI SDK by Vercel](https://sdk.vercel.ai/docs), with [Cerebras](https://cerebras.ai) as the AI provider (e.g. `gpt-oss-120b`).
 - Built-in tool integration for extending AI capabilities (demonstrated with a weather tool example).
 - Reasoning model support.
 - [shadcn/ui](https://ui.shadcn.com/) components for a modern, responsive UI powered by [Tailwind CSS](https://tailwindcss.com).
@@ -26,11 +26,11 @@
 
 You can deploy your own version to Vercel by clicking the button below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=Vercel+x+Groq+Chatbot&repository-name=ai-sdk-starter-groq&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-starter-groq&demo-title=Vercel+x+Groq+Chatbot&demo-url=https%3A%2F%2Fai-sdk-starter-groq.labs.vercel.dev%2F&demo-description=A+simple+chatbot+application+built+with+Next.js+that+uses+Groq+via+the+AI+SDK+and+the+Vercel+Marketplace&products=%5B%7B%22type%22%3A%22integration%22%2C%22protocol%22%3A%22ai%22%2C%22productSlug%22%3A%22api-key%22%2C%22integrationSlug%22%3A%22groq%22%7D%5D)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=Vercel+x+Cerebras+Chatbot&repository-name=ai-sdk-starter-cerebras&repository-url=https%3A%2F%2Fgithub.com%2FCodeSquar%2Fai-sdk-starter-cerebras&demo-title=Vercel+x+Cerebras+Chatbot&demo-description=A+simple+chatbot+application+built+with+Next.js+that+uses+Cerebras+via+the+AI+SDK)
 
 ## Running Locally
 
-1. Clone the repository and install dependencies:
+1. Clone the [repository](https://github.com/CodeSquar/ai-sdk-starter-cerebras) and install dependencies:
 
    ```bash
    npm install
@@ -40,29 +40,11 @@ You can deploy your own version to Vercel by clicking the button below:
    pnpm install
    ```
 
-2. Install the [Vercel CLI](https://vercel.com/docs/cli):
+2. Set up your environment variables. Copy `.env.example` to `.env.local` and add your [Cerebras API key](https://cloud.cerebras.ai):
 
    ```bash
-   npm i -g vercel
-   # or
-   yarn global add vercel
-   # or
-   pnpm install -g vercel
+   CEREBRAS_API_KEY=your_cerebras_api_key
    ```
-
-   Once installed, link your local project to your Vercel project:
-
-   ```bash
-   vercel link
-   ```
-
-   After linking, pull your environment variables:
-
-   ```bash
-   vercel env pull
-   ```
-
-   This will create a `.env.local` file with all the necessary environment variables.
 
 3. Run the development server:
 
@@ -78,6 +60,6 @@ You can deploy your own version to Vercel by clicking the button below:
 
 ## Authors
 
-This repository is maintained by the [Vercel](https://vercel.com) team and community contributors.
+This project is a fork of [Vercel's AI SDK Starter (Groq)](https://github.com/vercel-labs/ai-sdk-starter-groq), adapted to use [Cerebras](https://cerebras.ai) instead of Groq. Maintained by [CodeSquar](https://github.com/CodeSquar).
 
 Contributions are welcome! Feel free to open issues or submit pull requests to enhance functionality or fix bugs.
