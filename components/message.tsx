@@ -219,6 +219,8 @@ const PurePreviewMessage = ({
 };
 
 export const Message = memo(PurePreviewMessage, (prevProps, nextProps) => {
+  if (prevProps.isLatestMessage && nextProps.status === "streaming") return false;
+  
   if (prevProps.status !== nextProps.status) return false;
   if (!equal(prevProps.message.parts, nextProps.message.parts)) return false;
 

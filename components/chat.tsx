@@ -13,6 +13,7 @@ export default function Chat() {
   const [input, setInput] = useState("");
   const [selectedModel, setSelectedModel] = useState<modelID>(defaultModel);
   const { sendMessage, messages, status, stop } = useChat({
+    experimental_throttle: 16,
     onError: (error) => {
       toast.error(
         error.message.length > 0
